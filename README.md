@@ -144,3 +144,39 @@ Indexes
  State Machine
   - StartAt is the required field that must be present in the state machine definition
   - States : Fail, Choice, Parallel
+
+# Example: Resize Image Processor
+  Take only a jpg file and resize it 
+  
+  - ASL
+  {
+  "Comment": "Image Processor",
+  "StartAt": "GetFileType",
+  "States": {
+    "GetFileType": {
+      "Type": "Pass",
+      "Next": "CheckFileType"
+    },
+    "CheckFileType": {
+      "Type": "Choice",
+      "Choices":[
+        {
+          "Variable": "$.results.fileType",
+          "StringEquals":"jpg",
+          "Next":"ProcessFile"
+        }
+      ],
+      "Default":"DeleteSourceFile"
+    },
+    "DeleteSourceFile":{
+      "Type": "Pass",
+      "End": true
+    },
+    "ProcessFile":{
+      "Type": "Pass",
+      "End": true
+    }
+  }
+}
+
+<img width="300" alt="Screen Shot 2022-07-07 at 11 09 45 PM" src="https://user-images.githubusercontent.com/76544061/177909552-e36cc7b2-9239-4df5-9cbe-5712e2e75f63.png">
