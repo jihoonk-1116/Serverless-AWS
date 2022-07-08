@@ -148,8 +148,9 @@ Indexes
 # Example: Resize Image Processor
   Take only a jpg file and resize it 
   
-  - ASL
-  {
+  - Skeleton ASL
+  ```
+   {
   "Comment": "Image Processor",
   "StartAt": "GetFileType",
   "States": {
@@ -173,10 +174,40 @@ Indexes
       "End": true
     },
     "ProcessFile":{
-      "Type": "Pass",
-      "End": true
+      "Type": "Parallel",
+      "Next": "WriteToDynamoDB",
+      "Branches":[
+        {
+          "StartAt":"CopyToDestination",
+          "States":{
+            "CopyToDestination":{
+              "Type":"Pass",
+              "End":true
+            }
+          }
+        },
+        {
+          "StartAt":"ResizeImage",
+          "States":{
+            "ResizeImage":{
+              "Type":"Pass",
+              "End":true
+            }
+          }
+        }
+      ]
+    },
+    "WriteToDynamoDB":{
+      "Type":"Pass",
+      "Next":"DeleteSourceFile"
     }
   }
 }
+```
 
-<img width="300" alt="Screen Shot 2022-07-07 at 11 09 45 PM" src="https://user-images.githubusercontent.com/76544061/177909552-e36cc7b2-9239-4df5-9cbe-5712e2e75f63.png">
+## Skeleton Test
+
+Test Input <br>
+<img width="328" alt="Screen Shot 2022-07-07 at 11 29 11 PM" src="https://user-images.githubusercontent.com/76544061/177911375-5e2c4ecb-5f3c-496a-a2c8-282c16a79669.png">
+
+<img width="268" alt="Screen Shot 2022-07-07 at 11 27 15 PM" src="https://user-images.githubusercontent.com/76544061/177911270-59488c5e-c1c4-4aa3-8f1e-07f6fe85e1a6.png">
