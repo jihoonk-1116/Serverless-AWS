@@ -131,4 +131,16 @@ Indexes
   - ex) APP_NAME : My App 
   - In code, it can be acessed process.env.APP_NAME
  Encryption Environment Variables with KMS
-  - 
+  
+  
+# Step Functions
+ Step Functions are the logical progression of AWS Lambda functions
+  - visual work flow to coordinate or orchestrate Lambda functions to work together
+  - automate routine jobs like deployments, upgrades, migrations, patches
+  - build serverless or microservice
+  - ASL (Amazon States Language) : define different states or steps of the workflow, connections
+  - resulting workflow : state machine
+
+ State Machine
+  - StartAt is the required field that must be present in the state machine definition
+  - States : Fail, Choice, Parallel
