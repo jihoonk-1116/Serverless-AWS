@@ -103,5 +103,32 @@ Indexes
     * Composite Key : Partition Key + Sort Key
  - Partition or Hash Key decides the target partition
 
-#1. Integrate API Gateway with Lambda
-
+# More about Lambda 
+  Getting function name, version
+  
+  exports.handler = async (event, context) => {
+    let log = event;
+    
+    log.lambdaFunction = context.functionName;
+    log.lambdaFunction = context.functionVersion;
+    
+    return log;
+  }
+  
+ - $LATEST indicates latest verion
+ 
+ Lambda Alias 
+  - An alias is a pointer to one or two versions
+  - Using Aliases and stage variables, we no longer have to re-deploy the API when we change the backed Lambda function
+  - Alias : dev, prod, test
+ Traffic shifting
+  - Lambda will automatically split the incoming request traffic as per our split settings
+ Canary deployment 
+  - is used to test new API deployments and change to stage variables 
+ Environment variables
+  - Key-value pairs that are accessble from function code
+  - useful to store configuration settings without the need to change function code
+  - ex) APP_NAME : My App 
+  - In code, it can be acessed process.env.APP_NAME
+ Encryption Environment Variables with KMS
+  - 
