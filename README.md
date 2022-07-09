@@ -1,4 +1,11 @@
-# Serverless-AWS
+# Serverless-TODO APP Backend with AWS Lambda
+
+# Tools
+ * Lambda
+ * API Gateway
+ * Serverless Framework
+ * CodeCommit, CodeBuild with buildspec.yml
+ * DynamoDB
 
 Key Features and Benefits of Serverless
 
