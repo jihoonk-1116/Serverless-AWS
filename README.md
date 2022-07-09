@@ -4,8 +4,13 @@
  * Lambda
  * API Gateway
  * Serverless Framework
- * CodeCommit, CodeBuild with buildspec.yml
+ * CodeCommit, CodeBuild for CI/CD with buildspec.yml
  * DynamoDB
+
+
+# CI/CD Flow
+ CodeCommit -> push trigger -> Code Build -> Operate following buildspec.yml -> Initiate deploying by Serverless Framework using serverless.yml
+ -> Set up Lambda, API Gateway, DynamoDB -> Complete...
 
 Key Features and Benefits of Serverless
 
