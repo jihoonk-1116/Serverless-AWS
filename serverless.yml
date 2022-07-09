@@ -1,3 +1,5 @@
+#Serverless Infrastructure as Code
+
 service: sls-notes-backend
 
 frameworkVersion: "3"
@@ -5,7 +7,7 @@ frameworkVersion: "3"
 plugins:
   - serverless-offline
   - serverless-domain-manager
-
+# custom headers
 custom:
   allowedHeaders:
     - Accept
@@ -25,6 +27,7 @@ custom:
   #   certificateName: jihoonk1116-todoapp.link
   #   createRoute53Record: true
 
+#lambda configure
 provider:
   name: aws
   runtime: nodejs12.x
@@ -42,7 +45,7 @@ provider:
         - dynamodb:PutItem
         - dynamodb:DeleteItem
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.NOTES_TABLE}"
-
+#lambda CRUD functions 
 functions:
   add-note:
     handler: api/add-note.handler
@@ -98,7 +101,7 @@ functions:
           cors:
             origin: "*"
             headers: ${self.custom.allowedHeaders}
-
+#DynamoDB configuration 
 resources:
   Resources:
     NotesTable:
