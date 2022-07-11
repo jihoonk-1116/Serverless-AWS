@@ -41,7 +41,14 @@ All API should include the headers: <br>
 
 # CI/CD Flow
  CodeCommit -> push trigger -> Code Build -> Operate following buildspec.yml -> Initiate deploying by Serverless Framework using serverless.yml
- -> Set up Lambda, API Gateway, DynamoDB -> Complete...
+ -> Set up Lambda, API Gateway, DynamoDB -> Complete...<br>
+ 
+## Code PipeLine
+![image](https://user-images.githubusercontent.com/76544061/178172381-0230fd75-9c50-493f-9f05-ca5ec1a25a99.png)
+
+## Code Build
+![image](https://user-images.githubusercontent.com/76544061/178172584-e7c79410-2077-490d-8556-0cb8fe67709f.png)
+![image](https://user-images.githubusercontent.com/76544061/178172670-8485cf74-2118-40ad-bfe5-970f1aecab1f.png)
 
 
 # Key Features and Benefits of Serverless
