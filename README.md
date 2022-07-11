@@ -12,6 +12,17 @@
  CodeCommit -> push trigger -> Code Build -> Operate following buildspec.yml -> Initiate deploying by Serverless Framework using serverless.yml
  -> Set up Lambda, API Gateway, DynamoDB -> Complete...
 
+
+# CRUD API 
+## Get all todos
+![image](https://user-images.githubusercontent.com/76544061/178166284-95bd62ef-e010-472b-b957-4ee0554c6ec4.png)
+## Post todo
+![image](https://user-images.githubusercontent.com/76544061/178166298-caf887a7-8b62-4c5e-bfc3-71a04f022059.png)
+## Get todo
+- Debug
+![image](https://user-images.githubusercontent.com/76544061/178166468-fff2de7b-bb0c-41b5-bbb8-0c1455b9cb55.png)
+
+
 Key Features and Benefits of Serverless
 
   * No server management
