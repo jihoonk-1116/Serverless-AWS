@@ -1,6 +1,7 @@
 # Serverless-TODO APP Backend with AWS Lambda
 
-# Tools
+# Language & Tools
+ * Nodejs
  * Lambda
  * API Gateway
  * Serverless Framework
