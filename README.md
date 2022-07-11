@@ -6,6 +6,7 @@
  * Serverless Framework
  * CodeCommit, CodeBuild for CI/CD with buildspec.yml
  * DynamoDB
+ * Postman
 
 # CRUD API 
 All API should include the headers: <br>
