@@ -42,7 +42,9 @@ All API should include the headers: <br>
 # CI/CD Flow
  CodeCommit -> push trigger -> Code Build -> Operate following buildspec.yml -> Initiate deploying by Serverless Framework using serverless.yml
  -> Set up Lambda, API Gateway, DynamoDB -> Complete...<br>
- 
+## buildspce.yml
+![image](https://user-images.githubusercontent.com/76544061/178172781-aff06280-0fa8-45ac-904d-627abbab24a7.png)
+
 ## Code PipeLine
 ![image](https://user-images.githubusercontent.com/76544061/178172381-0230fd75-9c50-493f-9f05-ca5ec1a25a99.png)
 
