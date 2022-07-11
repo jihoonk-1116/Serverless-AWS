@@ -7,23 +7,43 @@
  * CodeCommit, CodeBuild for CI/CD with buildspec.yml
  * DynamoDB
 
+# CRUD API 
+All API should include the headers: <br>
+![image](https://user-images.githubusercontent.com/76544061/178170234-41a43882-dfd8-406f-a00e-257cef61a870.png) <br>
+
+## Get all todos
+- https://t1wg3lq3v1.execute-api.us-east-1.amazonaws.com/prod/notes
+- Response : <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170275-44f6e89a-fcf6-4853-bc85-7320c5205a0a.png" width="800"/>
+
+
+## Post todo
+- https://t1wg3lq3v1.execute-api.us-east-1.amazonaws.com/prod/note
+- Request & Response : <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170421-62465730-15d3-4dd2-ac1c-aed0f6a7680b.png" width="700"/>
+
+## Update todo
+- https://t1wg3lq3v1.execute-api.us-east-1.amazonaws.com/prod/note
+- Request & Response : <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170482-c33b1395-f24f-469a-aba0-ee59dc1e87f1.png" width="700"/>
+
+## Delete todo
+- https://t1wg3lq3v1.execute-api.us-east-1.amazonaws.com/prod/note/t/{note_id}
+- Before Request : <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170611-30ccc607-2c3b-4c1f-be49-8f04ae80b3cd.png" width="700"/>
+- Delete Request : <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170670-5231264d-1e6c-4814-91b5-ff203afb6989.png" width="700"/>
+- After Request: <br>
+<img src="https://user-images.githubusercontent.com/76544061/178170689-4f040204-a160-47dd-95ab-4bc301045ac7.png" width="700"/>
+
 
 # CI/CD Flow
  CodeCommit -> push trigger -> Code Build -> Operate following buildspec.yml -> Initiate deploying by Serverless Framework using serverless.yml
  -> Set up Lambda, API Gateway, DynamoDB -> Complete...
 
 
-# CRUD API 
-## Get all todos
-![image](https://user-images.githubusercontent.com/76544061/178166284-95bd62ef-e010-472b-b957-4ee0554c6ec4.png)
-## Post todo
-![image](https://user-images.githubusercontent.com/76544061/178166298-caf887a7-8b62-4c5e-bfc3-71a04f022059.png)
-## Get todo
-- Debug
-![image](https://user-images.githubusercontent.com/76544061/178166468-fff2de7b-bb0c-41b5-bbb8-0c1455b9cb55.png)
+# Key Features and Benefits of Serverless
 
-
-Key Features and Benefits of Serverless
 
   * No server management
   * Easy & Efficient Scaling
