@@ -4,7 +4,7 @@
  * Nodejs
  * Lambda
  * API Gateway
- * Serverless Framework
+ * Serverless Framework for IaC
  * CodeCommit, CodeBuild for CI/CD with buildspec.yml
  * DynamoDB
  * Postman
